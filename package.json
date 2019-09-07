@@ -1,0 +1,19 @@
+{
+  "name": "myblog",
+  "version": "1.0.0",
+  "description": "yoyohan的个人博客",
+  "main": "index.js",
+  "author": "yoyohan",
+  "license": "MIT",
+  "devDependencies": {
+    "vuepress": "^1.0.3"
+  },
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs",
+    "start": "npm run docs:dev"
+  },
+  "dependencies": {
+    "moment": "^2.24.0"
+  }
+}
