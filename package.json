@@ -8,7 +8,7 @@
   "devDependencies": {
     "@vuepress/plugin-back-to-top": "^1.0.4",
     "@vuepress/plugin-medium-zoom": "^1.0.4",
-    "vuepress": "^1.0.3"
+    "vuepress": "^1.0.4"
   },
   "scripts": {
     "docs:dev": "vuepress dev docs",
