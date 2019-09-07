@@ -122,6 +122,9 @@ module.exports = {
                 editLinkText: '在 GitHub 上编辑此页',
                 lastUpdated: '上次更新',
                 nav: [{
+                    text: '项目',
+                    link: '/project/'
+                }, {
                     text: '前端',
                     link: '/front-end/'
                 }, {
@@ -132,6 +135,7 @@ module.exports = {
                     link: '/program-language/'
                 }],
                 sidebar: {
+                    '/project/': getPJSidebar('项目展示', '我的公开源码'),
                     '/front-end/': getFESidebar('游戏引擎', '原生开发', '网页H5'),
                     '/back-end/': getBESidebar('接口服务器', '强联网服务器'),
                     '/program-language/': getPLSidebar('面向对象', '非面向对象')
@@ -143,6 +147,9 @@ module.exports = {
                 editLinkText: 'Edit this page on GitHub',
                 lastUpdated: 'Last Updated',
                 nav: [{
+                    text: 'project',
+                    link: '/en/project/'
+                },{
                     text: 'front-end',
                     link: '/en/front-end/'
                 }, {
@@ -153,6 +160,7 @@ module.exports = {
                     link: '/en/program-language/'
                 }],
                 // sidebar: {
+                //     '/project/': getPJSidebar('show', 'public'),
                 //     '/en/front-end/': getFESidebar('GameEngine', 'NativeDev', 'Web_H5'),
                 //     '/en/back-end/': getBESidebar('Interface_server', 'socket_server'),
                 //     '/en/program-language/': getPLSidebar('oop', 'non_oop')
@@ -166,8 +174,8 @@ module.exports = {
      * 参考：https://vuepress.vuejs.org/zh/plugin/#using-a-plugin
      */
     plugins: [
-        ['@vuepress/back-to-top'],
-        ['@vuepress/medium-zoom'],
+        ['@vuepress/back-to-top',true],
+        ['@vuepress/medium-zoom',true],
         ['@vuepress/last-updated', {
             transformer: (timestamp, lang) => {
                 // 不要忘了安装 moment
@@ -176,7 +184,7 @@ module.exports = {
                 return moment(timestamp).format('YYYY-MM-DD hh:mm:ss')
             }
         }]
-        
+
     ],
     /**
      * 用于修改内部的 Webpack 配置
@@ -188,11 +196,29 @@ module.exports = {
     configureWebpack: {
         resolve: {
             alias: {
-              'ui': '../../assets/ui',
-              'ui-en': '../../../assets/ui'
+                'ui': '../../assets/ui',
+                'ui-en': '../../../assets/ui'
             }
-          }
+        }
     },
+}
+
+function getPJSidebar(Show, Public) {
+    return [
+        ['', Show],
+        {
+            title: Public,
+            collapsable: false,
+            children: [
+                ['unity', 'Unity'],
+                ['cocoscreator', 'CocosCreator'],
+                ['layabox', 'Layabox'],
+                ['android', 'Android'],
+                ['weapp', '微信小程序'],
+                ['other', '其他'],
+            ]
+        },
+    ]
 }
 
 function getFESidebar(GameEngine, NativeDev, Web_H5) {
@@ -221,6 +247,7 @@ function getFESidebar(GameEngine, NativeDev, Web_H5) {
                 ['cocoscreator', 'CocosCreator'],
                 ['egret', 'Egret'],
                 ['vuepress', 'VuePress'],
+                ['vue', 'Vue'],
             ]
         }
     ]
@@ -351,7 +378,7 @@ function getPLSidebar(oop, non_oop) {
     //  */
     // less: {},
 
-    
+
 
     // /**
     //  * 通过 [webpack-chain](https://github.com/neutrinojs/webpack-chain) 来修改内部的 Webpack 配置
