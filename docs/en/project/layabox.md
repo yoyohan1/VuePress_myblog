@@ -1,4 +1,3 @@
-# Layabox
 ### Layabox_Basketball
 - 描述：LayaBox+Unity制作的篮球🏀微信小游戏
 - [Github地址](https://github.com/yoyohan1/Layabox_Basketball) 

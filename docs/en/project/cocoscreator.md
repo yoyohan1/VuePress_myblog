@@ -1,4 +1,3 @@
-# CocosCreator
 ### Cocoscreator_3DModelScene
 - 描述：CocoscreatorV2.12(3D版本) 制作的3D模型展示
 - [Github地址](https://github.com/yoyohan1/Cocoscreator_3DModelScene)  

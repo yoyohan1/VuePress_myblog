@@ -159,12 +159,12 @@ module.exports = {
                     text: 'program-language',
                     link: '/en/program-language/'
                 }],
-                // sidebar: {
-                //     '/project/': getPJSidebar('show', 'public'),
-                //     '/en/front-end/': getFESidebar('GameEngine', 'NativeDev', 'Web_H5'),
-                //     '/en/back-end/': getBESidebar('Interface_server', 'socket_server'),
-                //     '/en/program-language/': getPLSidebar('oop', 'non_oop')
-                // }
+                sidebar: {
+                    '/en/project/': getPJSidebar('Show', 'Public'),
+                    '/en/front-end/': getFESidebar('GameEngine', 'NativeDev', 'Web_H5'),
+                    '/en/back-end/': getBESidebar('Interface_server', 'socket_server'),
+                    '/en/program-language/': getPLSidebar('oop', 'non_oop')
+                }
             }
         }
     },
@@ -269,7 +269,7 @@ function getBESidebar(Interface_server, socket_server) {
             title: socket_server,
             collapsable: false,
             children: [
-                ['c#', 'C#'],
+                ['csharp', 'C#'],
                 ['java', 'Java'],
             ]
         }
@@ -284,7 +284,7 @@ function getPLSidebar(oop, non_oop) {
             // sidebarDepth: 2,
             children: [
                 ['', 'README'],
-                ['c#', 'C#'],
+                ['csharp', 'C#'],
                 ['java', 'Java'],
                 ['typescript', 'Typescript'],
             ]
@@ -299,6 +299,7 @@ function getPLSidebar(oop, non_oop) {
         },
     ]
 }
+
 
     // /**
     //  * 网站的标题，它将会被用作所有页面标题的前缀，同时，默认主题下，它将显示在导航栏（navbar）上

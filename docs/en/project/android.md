@@ -1,4 +1,3 @@
-# Android
 ### AndroidJar_MyInstallApkLibrary
  - 描述：我自制的安装APK的Jar包
  - [Github地址](https://github.com/yoyohan1/AndroidJar_MyInstallApkLibrary)  
