@@ -131,14 +131,14 @@ module.exports = {
                     text: '后端',
                     link: '/back-end/'
                 }, {
-                    text: '语言',
-                    link: '/program-language/'
+                    text: '工具软件',
+                    link: '/software/'
                 }],
                 sidebar: {
                     '/project/': getPJSidebar('项目展示', '我的公开源码'),
                     '/front-end/': getFESidebar('游戏引擎', '原生开发', '网页H5'),
                     '/back-end/': getBESidebar('接口服务器', '强联网服务器'),
-                    '/program-language/': getPLSidebar('面向对象', '非面向对象')
+                    '/software/': getPLSidebar()
                 }
             },
             '/en/': {
@@ -156,14 +156,14 @@ module.exports = {
                     text: 'back-end',
                     link: '/en/back-end/'
                 }, {
-                    text: 'program-language',
-                    link: '/en/program-language/'
+                    text: 'software',
+                    link: '/en/software/'
                 }],
                 sidebar: {
                     '/en/project/': getPJSidebar('Show', 'Public'),
                     '/en/front-end/': getFESidebar('GameEngine', 'NativeDev', 'Web_H5'),
                     '/en/back-end/': getBESidebar('Interface_server', 'socket_server'),
-                    '/en/program-language/': getPLSidebar('oop', 'non_oop')
+                    '/en/software/': getPLSidebar()
                 }
             }
         }
@@ -247,7 +247,7 @@ function getFESidebar(GameEngine, NativeDev, Web_H5) {
                 ['cocoscreator', 'CocosCreator'],
                 ['egret', 'Egret'],
                 ['vuepress', 'VuePress'],
-                ['vue', 'Vue'],
+                ['vue/', 'Vue'],
             ]
         }
     ]
@@ -276,27 +276,11 @@ function getBESidebar(Interface_server, socket_server) {
     ]
 }
 
-function getPLSidebar(oop, non_oop) {
+function getPLSidebar() {
     return [
-        {
-            title: oop,
-            collapsable: false,
-            // sidebarDepth: 2,
-            children: [
-                ['', 'README'],
-                ['csharp', 'C#'],
-                ['java', 'Java'],
-                ['typescript', 'Typescript'],
-            ]
-        },
-        {
-            title: non_oop,
-            collapsable: false,
-            // sidebarDepth: 2,
-            children: [
-                ['javascript', 'Javascript'],
-            ]
-        },
+        ['', '首页'],
+        ['git/', 'Git'],
+        ['cmder', 'Cmder'],
     ]
 }
 
